@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# 顧客管理フロントエンドアプリケーション
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React を使用して構築した、シンプルかつ直感的な顧客管理フロントエンドアプリケーションです。
+ログイン機能および顧客一覧の表示・検索・並び替えなどの機能を備えています。
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 使用技術
 
-### `npm start`
+- React 18
+- React Router DOM
+- JavaScript (ES6)
+- CSS（Tailwind CSS 未使用）
+- Node.js / npm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## セットアップ手順
 
-### `npm test`
+1. リポジトリをクローン
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. パッケージをインストール
+   npm install
 
-### `npm run build`
+3. 開発サーバーを起動
+   npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. ブラウザで以下にアクセス
+   http://localhost:3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 機能一覧
+～　ログイン機能　～
+　ユーザー名・パスワード入力欄
+　入力チェック（未入力時はエラーメッセージを表示）
+　ログイン成功時、顧客一覧ページへ遷移
 
-### `npm run eject`
+～　顧客一覧ページ　～
+　顧客情報（名前・メールアドレスなど）の一覧表示
+　検索バーによるフィルタリング機能
+　列ヘッダークリックでの昇順／降順ソート機能
+　レスポンシブ対応（スマホやタブレットでも閲覧可能）
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 動作確認方法
+・アプリを起動し、ログイン画面が表示されることを確認
+・任意のユーザー名／パスワードでログインできることを確認
+・顧客一覧画面に遷移し、以下の動作を確認
+・顧客情報が表形式で表示される
+・検索バーで名前/メールアドレス/電話番号/登録日によるフィルタができる
+・モバイル端末サイズでもレイアウトが崩れない
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ディレクトリ構成
+src/
+├── components/
+│   ├── LoginForm.jsx
+│   ├── CustomerList.jsx
+│   └── ...
+├── pages/
+│   ├── LoginPage.jsx
+│   └── CustomerPage.jsx
+├── App.jsx
+└── index.js
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 補足
+・バックエンド連携は未実装（API通信は行っていません）
+・フロントエンド単体での動作確認用サンプルとして開発
